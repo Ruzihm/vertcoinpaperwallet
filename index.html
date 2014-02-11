@@ -4,6 +4,9 @@
 	<meta charset="iso-8859-1">
 	<!--
 
+Forked from dogecoinpaperwallet (from http://dogecoinpaperwallet.net)
+See below for previous credits and copyrights below.
+
     generate-wallet.html (from http://dogecoinpaperwallet.net)
 
     email: Wells Riley (wells.riley@me.com)
@@ -12,7 +15,7 @@
 
     gpg --verify --with-fingerprint generate-wallet.html.sig generate-wallet.html
 
-    Wallet design is ©Copyright 2014 Wells Riley. See below for other credits and copyrights.
+    Wallet design is Â©Copyright 2014 Wells Riley. See below for other credits and copyrights.
 
     **************************************************************
 		* github: http://github.com/wellsriley/dogecoinpaperwallet
@@ -23,7 +26,7 @@
 	  * Bitcoin Donation Address: 1NiNja1bUmhSoTXozBRBEtR8LeF9TGbZBN
 		* GitHub Repository:	https://github.com/pointbiz/bitaddress.org
 	  **************************************************************
-	  Portions of this code are ©Copyright 2013 Canton Becker (https://bitcoinpaperwallet.com/) and Marcos Ojeda (https://generic.cx/), bitaddress.org.
+	  Portions of this code are Â©Copyright 2013 Canton Becker (https://bitcoinpaperwallet.com/) and Marcos Ojeda (https://generic.cx/), bitaddress.org.
 
 		Notice of Copyrights and Licenses:
 		***********************************
@@ -65,7 +68,7 @@
 		SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 		-->
 
-	<title>Dogecoin Paper Wallet Generator. Wow.</title>
+	<title>Vertcoin Paper Wallet Generator</title>
 
 
 	<script type="text/javascript">
@@ -4724,7 +4727,7 @@ Bitcoin.Address = function (bytes) {
 	this.version = Bitcoin.Address.networkVersion;
 };
 
-Bitcoin.Address.networkVersion = 0x1e; // so doge
+Bitcoin.Address.networkVersion = 0x47; // vertcoin 
 
 /**
 * Serialize this object as a standard Bitcoin address.
@@ -5101,7 +5104,7 @@ Bitcoin.ECKey = (function () {
 		this.compressed = (this.compressed == undefined) ? !!ECKey.compressByDefault : this.compressed;
 	};
 
-	ECKey.privateKeyPrefix = 0x9e; // dogenet 0x9e   mainnet 0x80    testnet 0xEF
+	ECKey.privateKeyPrefix = 0xc7; // vertnet 0xc7   mainnet 0x80    testnet 0xEF
 
 	/**
 	* Whether public keys should be returned compressed by default.
@@ -5285,19 +5288,19 @@ Bitcoin.ECKey = (function () {
 		return /^[A-Fa-f0-9]{64}$/.test(key);
 	};
 
-	// 51 characters base58, always starts with a '6'
+	// 51 characters base58, always starts with a '7'
 	ECKey.isWalletImportFormat = function (key) {
 		key = key.toString();
-		return (ECKey.privateKeyPrefix == 0x9e) ?
-							(/^6[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{50}$/.test(key)) :
+		return (ECKey.privateKeyPrefix == 0xc7) ?
+							(/^7[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{50}$/.test(key)) :
 							(/^9[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{50}$/.test(key));
 	};
 
 	// 52 characters base58
 	ECKey.isCompressedWalletImportFormat = function (key) {
 		key = key.toString();
-		return (ECKey.privateKeyPrefix == 0x9e) ?
-							(/^T[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{51}$/.test(key)) :
+		return (ECKey.privateKeyPrefix == 0xc7) ?
+							(/^W[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{51}$/.test(key)) :
 							(/^c[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{51}$/.test(key));
 	};
 
@@ -5740,7 +5743,7 @@ Bitcoin.Util = {
 	// Lightweight JavaScript-based User-Agent string parser
 	// https://github.com/faisalman/ua-parser-js
 	//
-	// Copyright © 2012-2013 Faisalman <fyzlman@gmail.com>
+	// Copyright Â© 2012-2013 Faisalman <fyzlman@gmail.com>
 	// Dual licensed under GPLv2 & MIT
 
 	(function (window, undefined) {
@@ -6564,8 +6567,8 @@ Bitcoin.Util = {
 <body onclick="SecureRandom.seedTime();" onkeypress="SecureRandom.seedTime();" onmousemove="ninja.seeder.seed(event);" onLoad="guessPrinterSettings(); setDesign(ninja.getQueryString()['design']);">
 	<div id="main">
   	<div id="logoback">
-			<div id="tagline">Open Source JavaScript Dogecoin Wallet Generator</div>
-			<div id="tagsite">Wow. Many doge. Very wallet.</div>
+			<div id="tagline">Open Source JavaScript Vertcoin Wallet Generator</div>
+			<div id="tagsite">Go vertical.</div>
 
 			<div class="menu" id="menu">
       	<div id="printeradjust">
@@ -6585,8 +6588,8 @@ Bitcoin.Util = {
 		</div><!-- end logoback -->
 
 		<div id="generate">
-			<div id="generatelabelmovemouse"><blink>Be a good shibe and move your mouse around.</blink></div>
-			<p id="generatelabelbitcoinaddress">(Doge loves chasing the pointer. It makes the wallet much secure.)</p>
+			<div id="generatelabelmovemouse"><blink>Let's get random. Move your mouse around a bit.</blink></div>
+			<p id="generatelabelbitcoinaddress">(Computers are predictable. Humans, on the other hand...)</p>
 		</div>
 
 		<div id="wallets">
@@ -6594,12 +6597,12 @@ Bitcoin.Util = {
 			<div id="landarea" class="walletarea">
 				<div class="instructionsarea">
 					<div class="notes">
-						<h1>Print out a beautiful and secure wallet for your dogecoins.</h1>
+						<h1>Print out a beautiful and secure wallet for your vertcoin.</h1>
 
 						<div style="float: left; width: 500px; margin-top: -20px;">
 
 							<div style="border-radius:5px;background:#C6EAFF;padding:4px 20px 1px;font-size:15px;">
-								<p>Looking for a comprehensive guide to using dogecoin paper wallets? Check out <a href="http://dogecointutorial.com/paper-wallet.html" target="_blank">Dogecoin Tutorial</a>!</p>
+								<p>Looking for a comprehensive guide to using DOGECOIN paper wallets? Check out <a href="http://dogecointutorial.com/paper-wallet.html" target="_blank">Dogecoin Tutorial</a>! Vertcoin tutorial coming sometime.</p>
 							</div>
 
 							<p>Here's an overview of what will happen, step by step:</p>
@@ -6617,7 +6620,7 @@ Bitcoin.Util = {
 	              Then you will put the same page back in your printer (but flipped over) to print out the back side of your wallet. This isn't just for good looks: the back side design includes additional tamper-resistant safeguards.
 	            </p>
 							<p><b id="foldwallet" onClick="ninja.tabSwitch(this);">Step 4: Cut, Fold, Seal &amp; Fund</b><br />
-	              Find your scissors! The final step is to cut out your wallet, fold it, and seal it  with opaque (light-blocking) tape. Now you're ready to transfer dogecoins from your online holdings to your new wallet.
+	              Find your scissors! The final step is to cut out your wallet, fold it, and seal it  with opaque (light-blocking) tape. Now you're ready to transfer certcoins from your online holdings to your new wallet.
 	            </p>
 	          </div>
 
@@ -6751,10 +6754,10 @@ Bitcoin.Util = {
 				<div class="instructionsarea">
 					<div class="notes">
 
-					  <h1>How to cut and fold your dogecoin wallet:</h1>
+					  <h1>How to cut and fold your vertcoin wallet:</h1>
 
 					  <div style="border-radius:5px;background:#C6EAFF;padding:4px 20px 1px;font-size:15px;margin:20px 0;">
-					  	<p>Looking for a comprehensive guide to using dogecoin paper wallets? Check out <a href="http://dogecointutorial.com/paper-wallet.html" target="_blank">Dogecoin Tutorial</a>!</p>
+					  	<p>Looking for a comprehensive guide to using DOGECOIN paper wallets? Check out <a href="http://dogecointutorial.com/paper-wallet.html" target="_blank">Dogecoin Tutorial</a>! Vertcoin tutorial coming sometime.</p>
 					  </div>
 
 						<p>Cut out your wallet <em>(use the dotted lines on the front as a guide, not the back!)</em></p>
@@ -6775,11 +6778,11 @@ Bitcoin.Util = {
 
 						<h1>How to add funds to your wallet:</h1>
 
-						<p>Send dogecoins to the address (or QR code) where your wallet says "Such Public." and "Many Deposit."</p>
+						<p>Send vertcoins to the address (or QR code) where your wallet says "Public address." and "Deposit here."</p>
 
 						<h1>How to withdraw funds from your wallet:</h1>
 
-						<p>Peel open the folded-over side of the wallet twice to reveal the private key and QR code. You should expect to withdraw the entire balance of the wallet by importing it (or "sweeping" it) to a live wallet, e.g. dogecoin-qt</p>
+						<p>Peel open the folded-over side of the wallet twice to reveal the private key and QR code. You should expect to withdraw the entire balance of the wallet by importing it (or "sweeping" it) to a live wallet, e.g. vertcoin-qt</p>
 
 					</div>
 				</div>
@@ -6790,15 +6793,15 @@ Bitcoin.Util = {
 		<div id="footer" class="footer">
 			<div class="authorbtc">
 				<div>
-					<span class="item"><b>Support Dogecoin Paper Wallet</b></span>
+					<span class="item"><b>Support Vertcoin Paper Wallet</b></span>
           <span class="item" style="font-size: 11px; font-family: 'Courier New', Courier, monospace;">
-            <strong>very dogecoin</strong>: DAWGAuMCMYCwHoU6DMNkGwrB9rGG3sY1t7<br />
-            <strong>such bitcoin</strong>:&nbsp; 1BrQpq4qdxnwJoD2WKKNMo4PLa8oi2mxAU<br />
+            <strong>Vertcoin</strong>: ---<br />
+            <strong>Bitcoinitcoin</strong>:&nbsp; ---<br />
           </span>
         </div>
         <div class="copyright">
         	<p>
-        		&copy; Copyright 2014 <a href="http://wells.ee">Wells Riley</a><br />
+        		&copy; Copyright 2014 <a href="https://github.com/Ruzihm">Ruzihm</a><br />
         		Other credits and JavaScript copyrights are included in the source.<br />
         		<strong>No warranty.</strong>
         	</p>
@@ -6831,12 +6834,6 @@ Bitcoin.Util = {
 			</div>
 		</div>
 	</div>
-
-
-
-
-
-
 
 	<script type="text/javascript">
 		// bitaddress.org code -- though significantly modified for this implementation.
@@ -7902,18 +7899,6 @@ Bitcoin.Util = {
 		document.getElementById('designPreview').src=myPreview;
 		document.getElementById('designPicker').value = whichDesign; // force menu option in case it was picked during onload.
 	}
-
-	</script>
-
-	<!-- Google Analytics tracking -->
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-	  ga('create', 'UA-4881230-19', 'dogecoinpaperwallet.net');
-	  ga('send', 'pageview');
 
 	</script>
 
