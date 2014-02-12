@@ -1,5 +1,5 @@
 # Vertcoin Paper Wallet
-- [Live Preview](http://ruzihm.github.io/vertcoinpaperwallet/)
+- [Live Preview](http://ruzihm.github.io/vertcoinpaperwallet/) **Traffic from this site is not encrypted, and wallets generated on this live preview site should not be considered to be secure! This is for previewing purposes only!**
 - [Download ZIP](https://github.com/Ruzihm/vertcoinpaperwallet/archive/master.zip)
 
 *This is a fork of wellsriley's [dogecoinpaperwallet](https://github.com/wellsriley/dogecoinpaperwallet), which is a fork of nsfmc's [paperwallet](https://github.com/nsfmc/paperwallet), which is a fork of cantonbecker's [bitcoinpaperwallet](https://github.com/cantonbecker/bitcoinpaperwallet) JavaScript powered offline bitcoin address generator.*
