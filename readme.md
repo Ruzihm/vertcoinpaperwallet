@@ -2,13 +2,16 @@
 
 *This is a fork of wellsriley's [dogecoinpaperwallet](https://github.com/wellsriley/dogecoinpaperwallet), which is a fork of nsfmc's [paperwallet](https://github.com/nsfmc/paperwallet), which is a fork of cantonbecker's [bitcoinpaperwallet](https://github.com/cantonbecker/bitcoinpaperwallet) JavaScript powered offline bitcoin address generator.*
 
+![front](https://github.com/Ruzihm/vertcoinpaperwallet/blob/master/images/front-300dpi.jpg?raw=true)
+![back](https://github.com/Ruzihm/vertcoinpaperwallet/blob/master/images/back-300dpi.jpg?raw=true)
+
+
 ### Donate!
 - Vertcoin `Vpu6rXfxDAiptJxTP6JU5iZXhW6Yevazu8`
 - Bitcoin `15zfNDMJP9q6CsfpqCAMqinnCh85KszJH5`
 
 
 #### The original dogecoinpaperwallet README:
-![wow-such-money](http://wellsosaur.us/T70V/wow-such-doge.jpg)
 # Dogecoin Paper Wallet
 - [Live Preview](http://dogecoinpaperwallet.net)
 - [Download ZIP](https://github.com/wellsriley/dogecoinpaperwallet/archive/master.zip)
